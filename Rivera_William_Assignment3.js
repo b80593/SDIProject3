@@ -130,3 +130,20 @@ var explorerPlanet = {
 };
 
 
+// Return Values
+{
+var admReport = getSendReport("Admiral Will Stryker");
+console.log(admReport);
+var attackTurn = stelarFleet("Nakhuta");
+console.log(attackTurn);
+var successFleet = launchAttack(3);
+console.log(successFleet);
+newWatch();
+console.log("The volume of Planet Nabu is " + explorerPlanet.volume());
+explorerPlanet.setRadius(24);
+console.log("Our new Planet Floward volume is " + explorerPlanet.volume());
+explorerPlanet.setRadius(36);
+console.log("The Planet G volume is " + explorerPlanet.volume());
+}
+console.log("Our Fleet were able to locate a new Planet and transfer survivors from Earth. After getting the victory over the enemy fleet.");
+console.log("This are the anecdotes of the Nakhuta Space Fleet exploring new planets and getting new adventures along the way.");
