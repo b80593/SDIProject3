@@ -57,7 +57,7 @@ var spaceTravel = {
     }
    
 };
- console.log("Each cruiser is driving at " + spaceTravel.speed());
+ console.log("Each cruiser is driving at " + spaceTravel.speed() + " lightyears.");
  
 // Boolean Function
 var getSendReport = function (admiral) {
@@ -82,3 +82,39 @@ var stelarFleet = function(backHome) {
 
 var attackTurn = stelarFleet("Nakhuta");
 console.log(attackTurn);
+
+// Number Function
+var launchAttack = function(enemy) {
+
+    while (enemy > 0) {
+        
+        console.log("Nakhuta Space Fleet started attacking " + enemy + " Star Destroyers then...");
+        enemy = enemy - 1;
+        
+    }
+    star = "Until all the Star Destroyers were eliminated.";
+    return star;
+}
+var successFleet = launchAttack(3);
+console.log(successFleet);
+
+// Array Function
+var newAttack = function() {
+    var planetNames = ["Planet G", "Nabu", "Floward", "Sarcarious"],
+	lightyearPerPlanet = [3, 6, 1, 4],
+	presNames = ["Lt. Otto", "Corporal Cheeback"];
+            var watchPlanet = function(whatPlanet) {
+            var planetName = planetNames[whatPlanet],
+                distanceThisPlanet = lightyearPerPlanet[planetNumber];
+                console.log(presNames[0] + " and " + presNames [1] + " wanted to explore " + planetName + " at " + distanceThisPlanet + " lightyears.");
+                for (var distances = 0; distances < distanceThisPlanet; distances += 3) {
+                    var distanceRemain = distanceThisPlanet - distances;
+                    console.log("We are " + distanceRemain + " lightyears left. " + distances + " lightyears we have traveled.");
+            }
+            console.log("We finished exploring " + planetName + ".");
+        };
+        for (var planetNumber = 0; planetNumber < planetNames.length; planetNumber++) {
+            watchPlanet(planetNumber);        
+    };   
+};
+newAttack();
