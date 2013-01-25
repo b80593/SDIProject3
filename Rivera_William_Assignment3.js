@@ -70,8 +70,6 @@ var getSendReport = function (admiral) {
     report = "The General received a " + sosreport + " report from the " + admiral + " of the Nakhuta Space fleet.";
     return report;
 };
-var admReport = getSendReport("Admiral Will Stryker");
-console.log(admReport);
 
 // String Function
 var stelarFleet = function(backHome) {
@@ -80,8 +78,7 @@ var stelarFleet = function(backHome) {
     return saliva;
 }
 
-var attackTurn = stelarFleet("Nakhuta");
-console.log(attackTurn);
+
 
 // Number Function
 var launchAttack = function(enemy) {
@@ -95,11 +92,10 @@ var launchAttack = function(enemy) {
     star = "Until all the Star Destroyers were eliminated.";
     return star;
 }
-var successFleet = launchAttack(3);
-console.log(successFleet);
+
 
 // Array Function
-var newAttack = function() {
+var newWatch = function() {
     var planetNames = ["Planet G", "Nabu", "Floward", "Sarcarious"],
 	lightyearPerPlanet = [3, 6, 1, 4],
 	presNames = ["Lt. Otto", "Corporal Cheeback"];
@@ -117,4 +113,20 @@ var newAttack = function() {
             watchPlanet(planetNumber);        
     };   
 };
-newAttack();
+
+
+// Object Function
+var explorerPlanet = {
+    "x"     : 1.33,
+    "pi"    : 3.1415927,
+    "radius": 12,
+    "volume": function() {
+        var totalVolume = this.x * this.pi * (this.radius * this.radius * this.radius);
+        return totalVolume;
+    },
+    "setRadius": function(newRadius) {
+        this.radius = newRadius;
+    }
+};
+
+
